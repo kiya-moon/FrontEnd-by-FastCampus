@@ -5,6 +5,28 @@
     > 각각의 브라우저가 제공하는 스타일이 조금씩 다를 수 있기 때문에 스타일 초기화를 해준다
       <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
 
+    > ex.
+      <!-- 브라우저를 초기화하면 ul태그의 점이나 ol 태그의 숫자, h 태그의 글자 크기 등이 모두 초기화된다 -->
+      <!-- ul태그는 목록에 순서 없음 -->
+      <ul>
+          <li>사과</li>
+          <li>딸기</li>
+          <li>수박</li>
+          <li>오렌지</li>
+      </ul>
+    
+      <!-- ol태그는 목록에 순서가 있음 -->
+      <ol>
+          <li>사과</li>
+          <li>딸기</li>
+          <li>수박</li>
+          <li>오렌지</li>
+      </ol>
+    
+      <div>
+        <h1>오늘의 날씨</h1>
+      </div>
+
 3. Emmet
     > HTML ex. 
       div + tap >> <div></div> 자동으로 입력됨
