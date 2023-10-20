@@ -1,0 +1,28 @@
+# 단축키
+Alt + Shift + F | Opt + Shift + F : 전체 코드 자동 정렬
+Ctrl + K/F | Cmd + K/F: 드래그 된 범위만 정렬
+Alt + Ctrl + S | Cmd + Alt + S : 전체 저장
+Ctrl + B | Cmd + B : sidebar 여닫기 가능
+Ctrl + P | Cmd + P : 빠른 열기(파일이나 기호 탐색)
+Ctrl + Shift + P | Cmd + Shift + P : 모든 명령 표시(에디터의 모든 명령에 접근)
+Ctrl + W | Cmd + W : 편집기 닫기
+Ctrl + F | Cmd + F : 편집기 내에서 찾기
+Ctrl + H | Cmd + Opt + F : 찾기 및 바꾸기
+Alt + ↑ | Opt + ↑ : 줄 위로 이동
+Alt + ↓ | Opt + ↓ : 줄 아래로 이동
+Alt + Shift + ↓ | Opt + Shift + ↓ : 줄 아래쪽으로 복사
+Alt + Shift + ↑ | Opt + Shift + ↑ : 줄 위쪽으로 복사
+Ctrl + Z | Cmd + Z : 되돌리기(Outdent)
+Tap : 들여쓰기
+      VSCode 우측 하단에서 공백확인 가능. '공백:2' 추천
+Shift + Tap : 내어쓰기(Indent)
+Ctrl + PageUp | Cmd +Shift + [ : 이전 편집기 열기(좌측 창으로 전환)
+Ctrl + PageDown | Cmd +Shift + ] : 다음 편집기 열기(우측 창으로 전환)
+Ctrl + \ | Cmd + \ : 편집기 분할
+
+
+# 확장 기능
+Korean Language Pack for Visual Studio Code > 한글화
+Auto Rename Tag 패키지 > HTML 태그 이름 한번에 변경
+Live Server > 바로 브라우저에 출력해주는 역할
+              개발을 위해 임시로 로컬 서버를 오픈한다
