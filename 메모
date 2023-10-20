@@ -1,0 +1,35 @@
+1. codepen.io
+    > 간단한 HTML, CSS, JS 코드를 테스트 해볼 수 있는 사이트
+
+2. 브라우저 스타일 초기화
+    > 각각의 브라우저가 제공하는 스타일이 조금씩 다를 수 있기 때문에 스타일 초기화를 해준다
+      <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+
+3. Emmet
+    > HTML ex. 
+      div + tap >> <div></div> 자동으로 입력됨
+      div.emmet + tap >> <div class="emmet"></div> 자동으로 입력됨
+      img + tap >> <img src="" alt="">
+    
+    > CSS ex.
+      div {
+        w:200 + tap >> width: 200px;
+        h:100 + tap >> height: 100px;
+        bc:orange + tap >> background-color: orange;
+      }
+  
+    > CSS 선택자에 대해 공부할 경우, 더 복잡한 구조의 HTML Emmet을 사용할 수 있다
+      ex. div>ul>li*4{$} + tap
+          >> <div>
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                </ul>
+            </div>
+      
+          >> * 기호는 곱하기, {}는 내용물 삽입, $는 순서대로 숫자 입력을 의미
+  
+        
+    
