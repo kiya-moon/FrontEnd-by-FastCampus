@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 이 상태에서는 html이 다 로딩되기 전에 js 스크립트가 실행되기 때문에,
+  main.js의 console.log(boxEl)이 콘솔에 찍히지 않는다.
+  body 부분으로 script를 옮겨도 되지만, script는 정보를 표기한 부분이므로 head에 있는 것이 좋다.
+  때문에 html이 모두 로딩된 후 다시 head에 있는 script를 읽을 수 있도록 defer를 사용 -->
+  <!-- <script src="./main.js"></script> -->
+  <script defer src="./main.js"></script>
+</head>
+<body>
+  <!-- <div class="box">Box!!</div> -->
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+</body>
+</html>
