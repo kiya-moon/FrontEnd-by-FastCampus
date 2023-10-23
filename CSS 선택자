@@ -1,0 +1,153 @@
+종류 : 기본, 복합, 가상클래스, 가상요소, 속성
+
+=============================================================================
+
+[ 기본 선택자 ]
+
+예시
+<div>
+  <ul>
+    <li>사과</li>
+    <li>딸기</li>
+    <li id="orange" class="orange">오렌지</li>
+  </ul>
+  <div>당근</div>
+  <p>토마토</p>
+  <span class="orange">오렌지</span>
+</div>
+
+1. * 전체 선택자(Universal Selector) : 모든 요소를 선택
+  * { color: red; }  => 전체 요소가 빨간색으로 변경된다
+
+2. ABC 태그 선택자(Type Selector) : 태그 이름이 ABC인 요소 선택
+  li { color: red; }  => li 태그를 가진 요소만 빨간색으로 변경된다
+
+3. .ABC 클래스 선택자(Class Selector) : HTML class 속성의 값이 ABC인 요소 선택
+  .orange { color: red;}  => class가 orange인 요소만 빨간색으로 변경된다
+
+4. #ABC 아이디 선택자(ID Selector) : HTML id 속성의 값이 ABC인 요소 선택
+  #orange { color: red; }  => id가 orange인 요소만 빨간색으로 변경된다
+
+=============================================================================
+
+[ 복합 선택자 ]
+
+예시
+<div>
+  <ul>
+    <li id="orange" class="orange">오렌지</li>
+    <li>망고</li>
+    <li>사과</li>
+    <li>딸기</li>
+  </ul>
+  <div>당근</div>
+  <p>토마토</p>
+  <span class="orange">오렌지</span>
+</div>
+<span class="orange">오렌지</span>
+
+1. ABCXYZ 일치 선택자(Basic Combinator) : 선택자 ABC와 XYZ를 동시에 만족하는 요소 선택
+                                         태그 선택자와 함께 사용하는 경우, 태그 선택자는 별도의 구분 방법이 없으므로 맨 앞에 적어준다
+  span.orange { color: red; } => span 태그이면서 class의 값이 orange인 요소만 빨간색으로 변경된다
+ 
+2. ABC > XYZ 자식 선택자(Child Combinator) : 선택자 ABC의 자식 요소 XYZ 선택
+  ul > .orange { color: red; } => class 값이 orange인 요소 중 부모가 ul 태그인 요소만 빨간색으로 변경된다
+  *** 뒤에서부터 해석하면 편한다 ***
+
+3. ABC XYZ 하위(후손) 선택자(Descendant Combinator) : 선택자 ABC의 하위 요소 XYZ 선택. '띄워쓰기'가 선택자의 기호!
+  div .orange { color: red; }  => class 값이 orange인 요소 중 상위 요소에 div 태그가 있는 요소만 빨간색으로 변경된다
+  *** 뒤에서부터 해석하면 편한다 ***
+
+4. ABC + XYZ 인접 형제 선택자(Adjacent Sibling Combinator) : 선택자 ABC의 다음 형제 요소 XYZ 하나를 선택
+  .orange + li { color: red; }  => li 태그 요소 중 class 값이 orange인 요소의 다음 요소를 하나 빨간색으로 변경한다. 여기서는 망고가 빨간색이 된다
+  *** 뒤에서부터 해석하면 편한다 ***
+
+5. ABC ~ XYZ 일반 형제 선택자(General Sibling Combinator) : 선택자 ABC의 다음 형제 요소 XYZ 모두를 선택
+  .orange ~ li { color: red; }  => li 태그 요소 중 class 값이 orange인 요소의 다음 요소를 모두 빨간색으로 변경한다. 여기서는 망고와 사과, 딸기가 빨간색이 된다
+  *** 뒤에서부터 해석하면 편한다 ***
+
+=============================================================================
+
+[ 가상 클래스 선택자(Pseudo-Classes) ]
+
+예시
+<a href="https://www.naver.com">NAVER</a>
+
+1. ABC:hover : 선택자 ABC 요소에 마우스 커서가 올라가 있는 동안 선택
+  a:hover { color: red; }  => NAVER에 마우스를 올리면 글자가 빨간색으로 변경된다
+
+2. ABC:active : 선택자 ABC 요소에 마우스를 클리갛고 있는 동안 선택
+  a:active { color: red; }  => NAVER를 클릭하고 있는 동안 글자가 빨간색으로 변경된다
+
+예시
+<input type="text"  />
+
+3. ABC:focus : 선택자 ABC요소가 포커스되면 선택
+               포커스가 될 수 있는 요소는 HTML 대화형 콘텐츠가 해당된다. 일반적으로 데이터를 입력받는 요소들. input, a, button, label, select 등
+               그 외 요소에 포커스를 할 필요가 있는 경우 tabindex 사용(tab 키를 사용해 포커스 할 수 있는 순서를 지정하는 속성). tabindex="-1"
+  input:focus { background-color: orange; }  => 사용자가 input 창을 클릭해 포커스되면, 포커스되어 있는 동안 input창이 오렌지색으로 변경된다
+
+예시
+<div class="fruits">
+  <span>딸기</span>
+  <span>수박</span>
+  <div>오렌지</div>
+  <p>망고</p>
+  <h3>사과</h3>
+</div>
+
+4. ABC:first-child : 선택자 ABC가 형제 요소 중 첫째라면 선택
+  .fruits span:first-child { color: red; }  => fruits class 하위 첫번째 요소이면서 span 태그인 딸기의 색이 빨간색으로 변경된다
+  .fruits div:first-child { color: red; }  => fruits class 하위에 첫번째 요소는 div 태그가 아니므로 아무것도 변경되지 않는다
+
+5. ABC:last-child : 선택자 ABC가 형제 요소 중 막내라면 선택
+  .fruits h3:last-child { color: red; }  => fruits class 하위 마지막 요소이면서 h3태그인 사과가 빨간색으로 변경된다
+
+6. ABC:nth-child(n) : 선택자 ABC가 형제 요소 중 (n)째라면 선택
+                      n은 0부터 시작한다(Zero-Based Numbering)
+  .fruits *:nth-child(2) { color: red; }  => fruits class 하위 전체 요소 중 2번째 요소인 수박의 색이 빨간색으로 변경된다
+  .fruits *:nth-child(2n) { color: red; }  => fruits class 하위 전체 요소 중 짝수 요소의 색이 빨간색으로 변경된다
+  .fruits *:nth-child(2n+1) { color: red; }  => fruits class 하위 전체 요소 중 홀수 요소의 색이 빨간색으로 변경된다
+  .fruits *:nth-child(n+2) { color: red; }  => fruits class 하위 전체 요소 중 첫번째 요소를 제외하고  두 번째 요소부터 색이 빨간색으로 변경된다
+
+7. ABC:not(XYZ) 부정 선택자 : 선택자 XYZ가 아닌 ABC 요소 선택
+  .fruits *:not(span) { color: red; }  => fruits class 하위 전체 요소 중 span 태그가 아닌 요소들(오렌지, 망고, 사과)의 색이 빨간색으로 변경된다
+
+=============================================================================
+
+[ 가상 요소 선택자(Pseudo-Elements) ]
+
+예시
+<div class="box">
+  Content!
+</div>
+
+1. ABC::before★ : 선택자 ABC 요소의 내부 앞에 내용(content)을 삽입. 사용하지 않더라도 content를 꼭 써줘야 함!!
+  .box::before { content: "앞!" }  => box class 내부 앞쪽에 "앞!"을 삽입 => 앞! Content!로 화면에 표시됨
+
+2. ABC::after★ : 선택자 ABC 요소의 내부 뒤에 내용(content)을 삽입. 사용하지 않더라도 content를 꼭 써줘야 함!!
+  .box::after { content: "뒤!" }  => box class 내부 뒤쪽에 "뒤!"를 삽입 => 뒤! Content!로 화면에 표시됨 
+  .box::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: royalblue;
+  }  => content에 텍스트가 아니더라도 빈칸을 주어 도형 등을 만들 수도 있다
+
+=============================================================================
+
+[ 속성 선택자(Pseudo-Elements) ]
+
+예시
+<input type="text" value="Front">
+<input type="password" value="1234">
+<input type="text" value="ABCD" disabled>
+
+1. [ABC] : 속성 ABC를 포함한 요소 선택
+  [disabled] { color: red; }  => disabled 속성을 가진 요소가 빨간색으로 변경된다
+  [type] { color: red; }  => input 태그는 기본적으로 type 속성을 모두 갖으므로 모두 빨간색으로 변경된다
+  즉, 특이한 속성을 찾는데는 용이하지만 일반적인 속성에는 적합하지 않다
+
+2. [ABC="XYZ"] : 속성 ABC를 포함하고 값이 XYZ인 요소 선택
+ [type="password"] { color: red; }  => type="password"인 요소의 색이 빨간색으로 변경된다 
