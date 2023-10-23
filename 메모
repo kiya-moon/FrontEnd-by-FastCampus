@@ -52,6 +52,35 @@
             </div>
       
           >> * 기호는 곱하기, {}는 내용물 삽입, $는 순서대로 숫자 입력을 의미
-  
+
+4. node js 환경 만들기
+    > node js LTS 버전으로 다운
+    > 터미널에서 node -v 로 버전확인 가능
+    > node js가 설치될 때 npm도 같이 설치됨
+      npm은 Node package Manager로 전 세계 개발자들이 만든 다양한 기능(패키지, 모듈)들을 관리
+      우리는 npm install 명령어를 통해서 필요한 패키지들을 간단하게 다운로드 할 수 있다
+
+    > npm init -y
+      npm 프로젝트가 만들어진다 => package.json 파일이 생성됨
+
+    > npm install lodash
+      lodash는 주로 array, collection, date 같은 데이터의 구조를 간편하게 함수형으로 다룰 수 있게 하기 위한 라이브러리
+      => node_modules 폴더가 생성되고 그 아래 lodash가 위치하게 된다 
+         package.json 파일에 dependancy가 추가된다
+
+    > npm install parcel 
+      우리가 설치하는 여러가지 패키지들을 웹사이트에 올라갈 수 있는 하나의 구조로 묶어주는 역할(Bundler라고도 한다)
+      웹상에서 동작하는 것은 아니기 때문에 개발자 모드로만 다운받는다
+      npm install parcel --save-dev or npm install parcel -D
+      => package.json 파일에 devDependancy가 추가된다
+         parcel 패키지에도 parcel 패키지를 이루는 다양한 dependancy를 하위 package.json 파일에서 확인 가능하며, 
+         이런 패키지들이 한 번에 다운로드되어 node_modules 폴더를 채우게 됨
+
+    > 즉, node_modules 폴더는 우리 프로젝트와 관련된 패키지 뿐만 아니라, 그 패키지와 연관된 패키지까지 모여져 있는 폴더
+      package-lock.json 파일에서 이런 패키지 간의 관계와 버전을 확인 가능하다
+
+    > package.json, package-lock.json 파일은 지우지 말 것!
+      node_modules 폴더는 없어지더라도 json 파일에 정보가 남아 있어 npm install로 다시 생성할 수 있다
+      
         
     
