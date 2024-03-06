@@ -6,8 +6,27 @@ import "./Board.css"
 
 export default class Board extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      // Array.fill()
+      // 배열의 시작 인덱스부터 끝 인덱스의 이전까지 정적인 값 하나로 채운다
+      squares: Array(9).fill(null)
+    }
+  }
+
+  handleClick(i) {
+    console.log('handleClick')
+    // Array.prototype.splice() : 원본 배열을 복사하여 splice
+    const squares = this.state.squares.splice()
+    squares[i] = 'X'
+    console.log(`i :: ${i} squares[i] :: ${squares[i]}`)
+    this.setState = ({ squares: squares })
+  }
+
   renderSquare(i) {
-    return <Square value={i} />
+    return <Square value={ this.state.squares[i] } 
+      onClick={ () => this.handleClick(i) } />
   }
 
   render() {
@@ -33,4 +52,5 @@ export default class Board extends Component {
       </div>
     )
   }
+
 }
