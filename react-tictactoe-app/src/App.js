@@ -4,8 +4,9 @@ import './App.css';
 
 function App() {
 
-  const [history, sethistory] = useState([ { squares: Array(9).fill(null) } ]);
-  const [xIsNext, setxIsNext] = useState(true);
+  const [history, sethistory] = useState([ { squares: Array(9).fill(null) } ])
+  const [xIsNext, setxIsNext] = useState(true)
+  // eslint-disable-next-line
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [stepNumber, setStepNumber] = useState(0)
 

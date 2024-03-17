@@ -1,4 +1,5 @@
 // import React, { Component } from 'react' // 클래스형
+// eslint-disable-next-line
 import React, { useState } from 'react'  // 함수형
 // import { Square } from './Square' > {}는 컴포넌트 안에 여러 개의 요소가 있을 때 사용
 import Square from './Square' // 현재  Square 컴포넌트에는 Square 요소 하나이므로 {} 사용x
