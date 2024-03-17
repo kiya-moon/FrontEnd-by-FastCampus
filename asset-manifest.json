@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github.io/FrontEnd-by-FastCampus/static/css/main.ef66273e.css",
-    "main.js": "/github.io/FrontEnd-by-FastCampus/static/js/main.2532edf4.js",
-    "static/js/453.ad0e490e.chunk.js": "/github.io/FrontEnd-by-FastCampus/static/js/453.ad0e490e.chunk.js",
-    "index.html": "/github.io/FrontEnd-by-FastCampus/index.html",
-    "main.ef66273e.css.map": "/github.io/FrontEnd-by-FastCampus/static/css/main.ef66273e.css.map",
-    "main.2532edf4.js.map": "/github.io/FrontEnd-by-FastCampus/static/js/main.2532edf4.js.map",
-    "453.ad0e490e.chunk.js.map": "/github.io/FrontEnd-by-FastCampus/static/js/453.ad0e490e.chunk.js.map"
+    "main.css": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/css/main.ef66273e.css",
+    "main.js": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/js/main.80e2559b.js",
+    "static/js/453.ad0e490e.chunk.js": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/js/453.ad0e490e.chunk.js",
+    "index.html": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/index.html",
+    "main.ef66273e.css.map": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/css/main.ef66273e.css.map",
+    "main.80e2559b.js.map": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/js/main.80e2559b.js.map",
+    "453.ad0e490e.chunk.js.map": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/js/453.ad0e490e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ef66273e.css",
-    "static/js/main.2532edf4.js"
+    "static/js/main.80e2559b.js"
   ]
 }
