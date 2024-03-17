@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/css/main.ef66273e.css",
-    "main.js": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/js/main.80e2559b.js",
-    "static/js/453.ad0e490e.chunk.js": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/js/453.ad0e490e.chunk.js",
-    "index.html": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/index.html",
-    "main.ef66273e.css.map": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/css/main.ef66273e.css.map",
-    "main.80e2559b.js.map": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/js/main.80e2559b.js.map",
-    "453.ad0e490e.chunk.js.map": "/FrontEnd-by-FastCampus/tree/main/react-tictactoe-app/static/js/453.ad0e490e.chunk.js.map"
+    "main.css": "/FrontEnd-by-FastCampus/react-tictactoe-app/static/css/main.ef66273e.css",
+    "main.js": "/FrontEnd-by-FastCampus/react-tictactoe-app/static/js/main.241a1be8.js",
+    "static/js/453.ad0e490e.chunk.js": "/FrontEnd-by-FastCampus/react-tictactoe-app/static/js/453.ad0e490e.chunk.js",
+    "index.html": "/FrontEnd-by-FastCampus/react-tictactoe-app/index.html",
+    "main.ef66273e.css.map": "/FrontEnd-by-FastCampus/react-tictactoe-app/static/css/main.ef66273e.css.map",
+    "main.241a1be8.js.map": "/FrontEnd-by-FastCampus/react-tictactoe-app/static/js/main.241a1be8.js.map",
+    "453.ad0e490e.chunk.js.map": "/FrontEnd-by-FastCampus/react-tictactoe-app/static/js/453.ad0e490e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ef66273e.css",
-    "static/js/main.80e2559b.js"
+    "static/js/main.241a1be8.js"
   ]
 }
